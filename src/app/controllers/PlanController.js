@@ -25,7 +25,7 @@ class PlanController {
 
     const planExists = await Plan.findOne({ where: { title: req.body.title } });
     if (planExists) {
-      return res.status(400).json({ error: 'This plan is already registered' });
+      return res.status(400).json({ error: 'This plan is already registred' });
     }
 
     const { id, title, duration, price } = await Plan.create(req.body);
